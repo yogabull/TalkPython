@@ -1,4 +1,8 @@
 print('--------------------------------')
-print('     Hello Pythonic World')
+print('     Hello Pythonic App')
 print('--------------------------------')
-print()
+print('')
+
+name = input('What is your name? ')
+greeting = 'Nice to meet you ' + name
+print(greeting)
