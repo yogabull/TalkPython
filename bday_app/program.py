@@ -17,22 +17,23 @@ def get_birthday_from_user():
     return birthday
 
 
-
 def compute_days_between_dates(original_date, target_date):
     this_year = datetime.date(target_date.year, original_date.month, original_date.day)
+    print(this_year, type(this_year))
+    print(target_date, type(target_date))
     dt = this_year - target_date
-    print()
-    print('Your birthday will be {}.'.format(this_year))
-    if dt.days < 0:
-        print('Your birthday was {} days ago.' .format(dt.days))
-    elif dt.days > 0:
-        print('Your birthday will be in {} days.' .format(dt.days))
+    print(dt.days, type(dt.days)) # the class .days turns dt into an integer type.
+    return dt.days
+
+
+def print_birthday_information(days):
+    print('The class for {} is '.format(days), type(days))
+    if days < 0:
+        print('You had your birthday {} days ago.'.format(-days))
+    elif days > 0:
+        print('Your birthday is in {} days.'.format(days))
     else:
         Print('Happy Birthday today.')
-
-
-def print_birthday_information():
-    pass
 
 
 def main():
@@ -41,7 +42,7 @@ def main():
     print('This is your birthday ',bday)
     today = datetime.date.today()
     number_of_days = compute_days_between_dates(bday, today)
-    print('\n', number_of_days, '\n')
-    # print_birthday_information(number_of_days)
+    print_birthday_information(number_of_days)
+
 
 main()
