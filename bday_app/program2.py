@@ -11,20 +11,18 @@ def print_header():
 
 
 def get_user_birthday():
-    # name = input('What is your name? ')
-    # print('When were you born {}?'.format(name))
-    year = 1971
-    # year = int(input('Year [YYYY]: '))
+    print('When were you born ?')
+    year = int(input('Year [YYYY]: '))
     month = int(input('What month [MM]: '))
     day = int(input('What day [DD]: '))
     birthday = datetime.date(year, month, day)
-    # print(type(birthday))
-    # print('Hi {}, your birthday is {}.'.format(name, birthday))
     return birthday
 
 
 def compute_days_between_dates(today, bdate):
-    this_year = datetime.date(year = today.year, month = bdate.month, day = bdate.day)
+    # The commented line below is refactored to following line.
+    # this_year = datetime.date(year = today.year, month = bdate.month, day = bdate.day)
+    this_year = datetime.date(today.year, bdate.month, bdate.day) # this is much tighter
     dt = today - this_year # created is the class 'datetime.timedelta'. Not an integer.
     return dt.days #this method turns the dt class to an integer.
     # these print statements output classes for verificaiton.
