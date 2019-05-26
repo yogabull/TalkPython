@@ -16,6 +16,7 @@ b1 = Person('Corbin', 18)
 b1.intro_func()
 
 '''
+# example from https://www.w3schools.com/python/python_classes.asp
 class Person:
   def __init__(mysillyobject, name, age):
     mysillyobject.name = name
