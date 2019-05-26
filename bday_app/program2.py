@@ -14,9 +14,9 @@ def get_birthday_from_user():
     month = int(input('What month were you born? '))
     day = int(input('What day were you born? '))
     #First datetime is the module. The second .datetime is the class
-    birthday = datetime.date(month, day, year)
+    birthday = datetime.datetime(year, month, day)
     print (birthday)
-    print('Hi {}, your birthday is {}.'.format(name,birthday))
+    print('Hi {}, your birthday is {}.'.format(name, birthday))
 
 def compute_days_between_dates():
     pass

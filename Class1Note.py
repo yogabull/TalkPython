@@ -1,9 +1,33 @@
+# Another class exercise
+
+class Person:
+    def __init__(self, name, age):
+        self.name = name
+        self.age = age
+
+    def intro_func(namen):
+        print(namen.name)
+        print(namen.age)
+
+g1 = Person('Elle', 15)
+g1.intro_func()
+
+'''
+class Person:
+  def __init__(mysillyobject, name, age):
+    mysillyobject.name = name
+    mysillyobject.age = age
+
+  def myfunc(abc):
+    print("Hello my name is " + abc.name)
+
+p1 = Person("John", 36)
+p1.myfunc()
+'''
 
 
 
-//////////////////////
-
-
+'''
 # Class exercise from: https://www.learnpython.org/en/Classes_and_Objects
 
 # define the Vehicle class
@@ -54,11 +78,12 @@ print("{}'s variables were populated from a tuple.".format(c3[0]))
 print("{}'s variables were populated from a tuple and is worth only {}".format(car4.name,str(car4.value)))
 
 print('\nIt might be faster to code class variables from tuples rather than hard-coding individual string variables.\n')
+'''
 
-
-//////////////////
+# /////////////////
 
 # Classes exercise from: https://www.learnpython.org/en/Classes_and_Objects
+
 # def list_benefits():
 #     return "More organized code", "More readable code", "Easier code reuse", "Allowing programmers to share and connect code together"
 #
