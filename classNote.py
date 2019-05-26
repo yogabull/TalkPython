@@ -12,6 +12,9 @@ class Person:
 g1 = Person('Elle', 15)
 g1.intro_func()
 
+b1 = Person('Corbin', 18)
+b1.intro_func()
+
 '''
 class Person:
   def __init__(mysillyobject, name, age):
