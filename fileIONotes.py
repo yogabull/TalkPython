@@ -13,22 +13,9 @@ print() Function:
 sys.stdout:
     Standard output file can be named: 'sys.stdout'
 
-f-Strings:
-    Another method to output varibles within in a string.
-    Formatted String Literals
-    This reads easily.
-
-    year = 2019
-    month = 'June'
-    f'It ends {month} {year}.'
-    >>> It ends June 2019.
-
-    https://docs.python.org/3/tutorial/inputoutput.html#tut-f-strings
-
-
 
 File I/O
-ie:
+ie (copied from repl.it website):
     file = open('output.txt', 'w')
     file=open('output.txt', "w")
     file.write("hello, World!")
