@@ -15,21 +15,21 @@ def print_header():
 
 def run_event_loop():
     print('What do you want to do with your journal?')
-    cmd = None
+    cmd = "EMPTY"
     journal_name = 'default'
     journal_data = journal.load(journal_name)
 
-    while cmd != 'x':
+    while cmd != 'x' and cmd: # the truthiness of empty collections (strings) is false.
         cmd = input('List entries [L], Add entry [A], or exit [x]: ')
         cmd = cmd.lower().strip()
         if cmd == 'l':
             list_entries(journal_data)
         elif cmd == 'a':
             add_entries(journal_data)
-        elif cmd != 'x':
+        elif cmd != 'x' and cmd: # another empty 'cmd' test which asks if it is false.
             print("I don't understand {}.".format(cmd))
     print('\nGoodbye\n')
-    journal.save(journal_data)
+    journal.save(journal_name, journal_data)
 
 
 def list_entries(data):

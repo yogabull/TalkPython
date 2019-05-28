@@ -23,6 +23,9 @@ print('\nYou can remove the table positional index if you put ** before the form
 
 print('Corbin : {Corbin:d}\nElle : {Elle:d}\n'.format(**table))
 
+for i in range(1, 11):
+    print('{0:2d} -- {1:3d} -- {2:4d}'.format(i, i*i, i*i*i))
+    # I think the ':2d' within {0:2d} designates a mininum number of spaces to print.
 
 '''
 https://docs.python.org/3/tutorial/inputoutput.html#tut-f-strings
