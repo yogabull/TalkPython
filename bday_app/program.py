@@ -40,7 +40,7 @@ def main():
     bday = get_birthday_from_user()
     print('This is your birthday ',bday)
     today = datetime.date.today()
-    number_of_days = compute_days_between_dates(bday, today)
+    # number_of_days = compute_days_between_dates(bday, today)
     print_birthday_information(number_of_days)
     print('Nearly done.')
 
