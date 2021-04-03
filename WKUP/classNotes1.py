@@ -6,13 +6,13 @@ class Person:
         self.age = age
 
     def intro_func(namen):
-        print(namen.name)
-        print(namen.age)
+        print(name.name)
+        print(name.age)
 
-g1 = Person('Elle', 15)
+g1 = Person('Ralph', 22)
 g1.intro_func()
 
-b1 = Person('Corbin', 18)
+b1 = Person('Betty', 22)
 b1.intro_func()
 
 '''
