@@ -1,0 +1,133 @@
+
+------- Concepts ------
+
+1. File I/O
+2. for-in Loop
+3. complex conditionals
+4. Doc Strings
+5. __name__
+
+=======================
+
+
+---------------- 1. File I/O ------------------
+
+EXAMPLE:
+
+items = ['cat', 'dog', 'rabbit']
+
+with open(filename, 'w') as fout:
+    for e in items():
+         fout.write(e + '\n')
+
+
+NOTES:
+	"open" creates a file stream.
+	"with" adds auto-closing safety.
+	File streams have many read/write operations.
+
+===============================================
+
+
+-------------- 2. for-in Loop  ---------------
+
+EXAMPLE:
+
+items = ['cat', 'dog', 'rabbit']
+
+for item in items:
+    print(f"The item is {item}.")
+
+for idx, item in enumerate(items):
+    print(f"Item {idx} is {item}.")
+
+
+NOTES:
+	Can get the item and index using enumerate.
+
+===============================================
+
+
+----------- 3. Complex Conditionals------------
+
+EXAMPLE:
+
+if not x and (z != 2 or not y):
+    # if code goes here.
+
+
+NOTES:
+	Complex conditionals are created using not, and, and or.
+	Strings evaluate to True.
+	Empty strings evaluate to False.
+	Think english except when using <, > and !=.	
+
+	The example above reads:
+	If x is False and
+	(z does not equal 2 or y is False).
+
+
+===============================================
+ 
+
+-------- 4. Doc Strings ----------
+
+EXAMPLE:
+
+def some_method():
+	"""
+	some_method will book a hotel and flight for user.
+	"""
+
+def another_method(input):
+	"""
+	This method does another thing.
+	param input: Details about the functions input parameter.
+	return: Details what the function returns.
+	"""
+	return another_thing
+
+
+NOTES:
+	Doc strings describe method implementation.
+	The string is used in creating docs and intellisense.
+	A string surrounded by tripple quotes at the beginning of the method, class or module.
+
+===============================================
+
+
+-------- 5. __name__ ----------
+
+EXAMPLE A:
+
+module.py
+print(f'Hello world from {__name__}')
+> Hello world from __main__
+
+
+EXAMPLE B:
+
+if __name__ == __main__:
+	main()
+
+
+NOTES:
+	This is how Python knows if code is being run as the main program
+	or from an imported module.
+	
+	Depending on the caller, __name__ is either the module's name or __main__
+	
+	more details: 
+
+	If a module (module_name) is imported, 
+	the Example B code's variable, __name__, 
+	will be equal to the module's name (module_name).
+
+	but
+
+	If a program is run with Example B code,
+	the variable, __name__, 
+	will actually be equal to __main__.
+
+
+===============================================
