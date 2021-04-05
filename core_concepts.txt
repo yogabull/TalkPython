@@ -107,7 +107,7 @@ print(f'Hello world from {__name__}')
 
 EXAMPLE B:
 
-if __name__ == __main__:
+if __name__ == "__main__":
 	main()
 
 
