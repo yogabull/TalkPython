@@ -1,0 +1,13 @@
+urllib package
+
+contains five modules
+
+request: open URLs
+response:(used internally) won't work with this directly
+error: request exceptions
+parse: userful URL functions
+	breaks URL into useful parts
+
+robotparser: robots.txt files
+
+

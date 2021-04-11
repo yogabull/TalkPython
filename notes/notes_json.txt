@@ -1,0 +1,8 @@
+import json
+dir(json) to see methods
+
+json.load(f):   Load JSON data from a file (or file-like object).
+json.loads(s):  Load JSON data from a string
+
+json.dump(j, f):   Write JSON to a file (or file-like object).
+json.dumps(j):     Writes JSON to a sting 
