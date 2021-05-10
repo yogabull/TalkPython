@@ -1,0 +1,32 @@
+notes_csv.txt
+"""This will import a csv file and print it by its rows."""
+
+
+import os
+os.chdir('../talkpython') #change directory to where the file is located.
+
+with open('MOCK_DATA.csv') as raw_data:
+    print(raw_data.read())
+
+
+============= or ============
+
+
+import os
+
+
+path = '../directory/file.csv'
+
+with open(path) as raw_data:
+    print(raw_data.read())
+
+
+"""This only prints a long string line by line."""
+
+
+
+============= or ============
+"""Next code converts the csv file into a list of strings"""
+
+
+ 

@@ -5,4 +5,19 @@ json.load(f):   Load JSON data from a file (or file-like object).
 json.loads(s):  Load JSON data from a string
 
 json.dump(j, f):   Write JSON to a file (or file-like object).
-json.dumps(j):     Writes JSON to a sting 
+json.dumps(j):     Writes JSON to a string
+
+
+sample code
+
+
+json_file = open("../talkPython/movie_1.txt", "r", encoding="utf-8")
+movie = json.load(json_file)
+json_file.close()
+
+movie['title']
+movie['director']
+
+>>> type(movie)
+<class 'dict'>
+
