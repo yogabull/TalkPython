@@ -4,22 +4,27 @@ This file includes using Named Tuples instead of unpacking plain tuples.
 
 Notice the 'collections' import.
 This module enables 'Location' to become a named tuple.
-
 """
 import collections
+import logging
+
+LOGGER = logging.getLogger()
+LOGGER.setLevel('INFO')
 
 Location = collections.namedtuple('Location', 'city state country')
 
 
 def main():
+    """ Here is a string. """
     show_header()
 
     # Get location for weather
     location_text = input(
         "Where do you want the weather report (ex. Dallas, USA)? ")
     print(f"You selected {location_text}. \n")
+    # LOGGER.info(f"You selected {location_text}.")
+    LOGGER.info("You selected %d.", location_text)
 
-    """Convert plain text request to data we can use"""
     loc = convert_plaintext_location(location_text)
     print(f"Using the named tuple'Location': {loc}")
     print(f"This line uses the city dot method for 'Location': {loc.city}")
@@ -31,20 +36,23 @@ def main():
 
     # Get report from the weather api
     data = call_weather_api(loc)
+    print(data)
 
     # report returned weather data
 
 
 def call_weather_api(loc):
-    # &state = OR
-    url = f'https://weather.talkpython.fm/api/weather?city={loc.city}&country={loc.country}&units=imperial'
+    """ Adds state to the url if entered."""
+    url = f'https://weather.talkpython.fm/api/weather?city \
+        ={loc.city}&country={loc.country}&units=imperial'
     if loc.state:
         url += f'&state={loc.state}'
     print(f"\nCall this {url}")
-    return None
+    return url
 
 
 def convert_plaintext_location(location_text):
+    """ Cleans up location text."""
     if not location_text or not location_text.strip():
         return None
 
@@ -78,11 +86,11 @@ def convert_plaintext_location(location_text):
 
 
 def show_header():
+    """Prints header"""
     print('---------------------------')
     print('      Weather Client')
     print('---------------------------')
     print()
-
 
 if __name__ == "__main__":
     main()

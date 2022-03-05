@@ -2,12 +2,12 @@
 
 
 def main():
-    show_header()
-
-    # Get location for weather
+    """ Get location for weather"""
+    show_header() # Displays app header.
     location_text = input(
         "Where do you want the weather report (ex. Dallas, USA)? ")
-    print(f"You selected {location_text}. \n")
+    # print(f"You selected {location_text}. \n")
+    print("You selected %d. \n", location_text)
 
     """Convert plain text request to data we can use"""
     city, state, country = convert_plaintext_location(location_text)
@@ -18,6 +18,7 @@ def main():
 
 
 def convert_plaintext_location(location_text):
+    """Clean location string."""
     if not location_text or not location_text.strip():
         return None
 
@@ -33,6 +34,7 @@ def convert_plaintext_location(location_text):
         city = parts[0].strip()
         state = parts[1].strip()
     elif len(parts) == 3:
+        """Assigns input to variables."""
         city = parts[0]
         state = parts[1]
         country = parts[2]
@@ -44,6 +46,7 @@ def convert_plaintext_location(location_text):
 
 
 def show_header():
+    """App Header"""
     print('---------------------------')
     print('      Weather Client')
     print('---------------------------')
